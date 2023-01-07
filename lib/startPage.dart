@@ -32,7 +32,7 @@ class StartPage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                     child: Image(
                       image: AssetImage(
-                        'assets/burger.jpeg',
+                        'assets/burger.jpg',
                       ),
                       fit: BoxFit.fitHeight,
                       height: 500,
@@ -75,7 +75,7 @@ class StartPage extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(15),
         child: SizedBox(
           width: double.infinity,
           child: FloatingActionButton.extended(
