@@ -80,7 +80,10 @@ class StartPage extends StatelessWidget {
           width: double.infinity,
           child: FloatingActionButton.extended(
             backgroundColor: Colors.black87,
-            onPressed: () {},
+            onPressed: () {
+              //    Navigator.pushReplacement((context), ),
+              //navigate kon too orderpage.
+            },
             label: const Text('Get Started'),
           ),
         ),
