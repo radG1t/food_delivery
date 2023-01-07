@@ -21,42 +21,55 @@ class StartPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 120),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              const Text(
-                'Choose your prefrence',
-                style: TextStyle(fontSize: 12),
-              ),
-              const SizedBox(
-                height: 14,
-              ),
-              Text(
-                'What`s your',
-                style: GoogleFonts.lora(
-                  color: Colors.black,
-                  fontSize: 34,
-                  fontWeight: FontWeight.w800,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(100)),
+                    child: Image(
+                      image: AssetImage(
+                        'assets/burger.jpeg',
+                      ),
+                      fit: BoxFit.fitHeight,
+                      height: 500,
+                    ),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Text(
-                'favorite Food?',
-                style: GoogleFonts.lora(
-                  color: Colors.grey.shade800,
-                  fontSize: 34,
-                  fontWeight: FontWeight.w800,
+                const SizedBox(
+                  height: 120,
                 ),
-
-                // style: TextStyle(fontFamily:GoogleFonts(),
-                //     color: Colors.grey,
-                //     fontSize: 34,
-                //     fontWeight: FontWeight.bold),
-              ),
-            ],
+                const Text(
+                  'Choose your prefrence',
+                  style: TextStyle(fontSize: 12),
+                ),
+                const SizedBox(
+                  height: 14,
+                ),
+                Text(
+                  'What`s your',
+                  style: GoogleFonts.lora(
+                    color: Colors.black,
+                    fontSize: 34,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  'favorite Food?',
+                  style: GoogleFonts.lora(
+                    color: Colors.grey.shade800,
+                    fontSize: 34,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
