@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartPage extends StatelessWidget {
-  const StartPage({super.key, required this.title});
-
-  final String title;
+  const StartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +18,47 @@ class StartPage extends StatelessWidget {
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 24),
         ),
       ),
-      body: Column(
-        children: const [
-          Text('Choose your prefrence'),
-          Text(
-            'What`s your',
-            style: TextStyle(color: Colors.black),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 120),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text(
+                'Choose your prefrence',
+                style: TextStyle(fontSize: 12),
+              ),
+              const SizedBox(
+                height: 14,
+              ),
+              Text(
+                'What`s your',
+                style: GoogleFonts.lora(
+                  color: Colors.black,
+                  fontSize: 34,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              Text(
+                'favorite Food?',
+                style: GoogleFonts.lora(
+                  color: Colors.grey.shade800,
+                  fontSize: 34,
+                  fontWeight: FontWeight.w800,
+                ),
+
+                // style: TextStyle(fontFamily:GoogleFonts(),
+                //     color: Colors.grey,
+                //     fontSize: 34,
+                //     fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
-          Text(
-            'favorite Food?',
-            style: TextStyle(color: Colors.grey),
-          ),
-        ],
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Padding(
