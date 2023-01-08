@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/order.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class StartPage extends StatelessWidget {
+class StartPage extends StatefulWidget {
   const StartPage({super.key});
 
   @override
+  State<StartPage> createState() => _StartPageState();
+}
+
+class _StartPageState extends State<StartPage> {
+  @override
   Widget build(BuildContext context) {
+    final PageController controller = PageController();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -27,10 +34,55 @@ class StartPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                PageView(
+                  scrollDirection: Axis.horizontal,
+                  reverse: true,
+                  //controller: controller,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                    ),
+                    Container(
+                      color: Colors.lightBlue,
+                    ),
+                    Container(
+                      color: Colors.indigoAccent,
+                    ),
+                    // Expanded(
+                    //   child: ClipRRect(
+                    //     borderRadius: BorderRadius.all(
+                    //       Radius.circular(100),
+                    //     ),
+                    //     child: Image(
+                    //       image: AssetImage(
+                    //         'assets/burger.jpg',
+                    //       ),
+                    //       fit: BoxFit.fitHeight,
+                    //       height: 500,
+                    //     ),
+                    //   ),
+                    // ),
+                    // ClipRRect(
+                    //   borderRadius: BorderRadius.all(
+                    //     Radius.circular(100),
+                    //   ),
+                    //   child: Image(
+                    //     image: AssetImage(
+                    //       'assets/burger.jpg',
+                    //     ),
+                    //     fit: BoxFit.fitHeight,
+                    //     height: 500,
+                    //   ),
+                    // ),
+                  ],
+                ),
+                /*
                 const Expanded(
                   child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(100)),
-                    child: Image(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                    child:  Image(
                       image: AssetImage(
                         'assets/burger.jpg',
                       ),
@@ -38,7 +90,7 @@ class StartPage extends StatelessWidget {
                       height: 500,
                     ),
                   ),
-                ),
+                ),  */
                 const SizedBox(
                   height: 120,
                 ),
@@ -81,8 +133,17 @@ class StartPage extends StatelessWidget {
           child: FloatingActionButton.extended(
             backgroundColor: Colors.black87,
             onPressed: () {
-              //    Navigator.pushReplacement((context), ),
-              //navigate kon too orderpage.
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OrderPage(),
+                  ));
+              /*    Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: ((context) => const OrderPage()),
+                ),
+              );*/
             },
             label: const Text('Get Started'),
           ),
