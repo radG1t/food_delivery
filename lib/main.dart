@@ -14,8 +14,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Food_delivery',
       theme: ThemeData(
-          //    primarySwatch: Colors.blue,
-          ),
+          fontFamily: 'GoogleFonts.lora()',
+          textTheme: const TextTheme(
+            headline1: TextStyle(
+              color: Colors.black,
+              fontSize: 26,
+              fontWeight: FontWeight.w800,
+            ),
+            headline2: TextStyle(
+              color: Colors.black,
+              fontSize: 26,
+              fontWeight: FontWeight.w800,
+            ),
+          )),
       home: const StartPage(),
     );
   }
