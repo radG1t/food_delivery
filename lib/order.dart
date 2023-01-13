@@ -57,6 +57,7 @@ class _OrderPageState extends State<OrderPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // text
             Text('What would',
                 style: GoogleFonts.lora(
                   color: Colors.black,
@@ -84,15 +85,16 @@ class _OrderPageState extends State<OrderPage> {
               ],
             ),
             const SizedBox(
-              height: 15,
+              height: 20,
             ),
+            //searchBox
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Container(
                 height: 45,
                 color: Colors.grey.shade300,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -105,9 +107,98 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            //cards
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Container(
+                    height: 220,
+                    width: 160,
+                    color: Colors.yellow,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/burger.jpg',
+                          //   fit: BoxFit.,
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Container(
+                            height: 45,
+                            color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text('Burger',
+                                      style: textTheme.headline1!.copyWith(
+                                          fontSize: 20, color: Colors.grey)),
+                                  const SizedBox(
+                                    width: 25,
+                                  ),
+                                  const Icon(
+                                    CupertinoIcons.money_dollar,
+                                    size: 26,
+                                    color: Colors.black,
+                                  ),
+                                  Text('28',
+                                      style: textTheme.headline1!.copyWith(
+                                          fontSize: 22, color: Colors.black)),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Container(
+                    height: 180,
+                    width: 160,
+                    color: Colors.red,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Container(
+                    height: 180,
+                    width: 160,
+                    color: Colors.red,
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Container(
+                    height: 220,
+                    width: 160,
+                    color: Colors.yellow,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [],
+      // ),
     );
   }
 }
