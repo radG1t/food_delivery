@@ -12,7 +12,6 @@ class StartPage extends StatefulWidget {
 class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
-    final PageController controller = PageController();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -34,33 +33,6 @@ class _StartPageState extends State<StartPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                /*   Expanded(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(100),
-                    ),
-                    child: Image(
-                      image: AssetImage(
-                        'assets/burger.jpg',
-                      ),
-                      fit: BoxFit.fitHeight,
-                      height: 500,
-                    ),
-                  ),
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(100),
-                  ),
-                  child: Image(
-                    image: AssetImage(
-                      'assets/burger.jpg',
-                    ),
-                    fit: BoxFit.fitHeight,
-                    height: 500,
-                  ),
-                ),  */
-
                 const Expanded(
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(
