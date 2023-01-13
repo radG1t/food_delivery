@@ -34,55 +34,12 @@ class _StartPageState extends State<StartPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                PageView(
-                  scrollDirection: Axis.horizontal,
-                  reverse: true,
-                  //controller: controller,
-                  children: [
-                    Container(
-                      color: Colors.red,
-                    ),
-                    Container(
-                      color: Colors.lightBlue,
-                    ),
-                    Container(
-                      color: Colors.indigoAccent,
-                    ),
-                    // Expanded(
-                    //   child: ClipRRect(
-                    //     borderRadius: BorderRadius.all(
-                    //       Radius.circular(100),
-                    //     ),
-                    //     child: Image(
-                    //       image: AssetImage(
-                    //         'assets/burger.jpg',
-                    //       ),
-                    //       fit: BoxFit.fitHeight,
-                    //       height: 500,
-                    //     ),
-                    //   ),
-                    // ),
-                    // ClipRRect(
-                    //   borderRadius: BorderRadius.all(
-                    //     Radius.circular(100),
-                    //   ),
-                    //   child: Image(
-                    //     image: AssetImage(
-                    //       'assets/burger.jpg',
-                    //     ),
-                    //     fit: BoxFit.fitHeight,
-                    //     height: 500,
-                    //   ),
-                    // ),
-                  ],
-                ),
-                /*
-                const Expanded(
+                /*   Expanded(
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
-                    child:  Image(
+                    child: Image(
                       image: AssetImage(
                         'assets/burger.jpg',
                       ),
@@ -90,7 +47,34 @@ class _StartPageState extends State<StartPage> {
                       height: 500,
                     ),
                   ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(100),
+                  ),
+                  child: Image(
+                    image: AssetImage(
+                      'assets/burger.jpg',
+                    ),
+                    fit: BoxFit.fitHeight,
+                    height: 500,
+                  ),
                 ),  */
+
+                const Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                    child: Image(
+                      image: AssetImage(
+                        'assets/burger.jpg',
+                      ),
+                      fit: BoxFit.fitHeight,
+                      height: 500,
+                    ),
+                  ),
+                ),
                 const SizedBox(
                   height: 120,
                 ),
