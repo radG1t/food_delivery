@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:food_delivery/card.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({super.key});
@@ -13,6 +14,10 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    String? foodName;
+    String? imgName;
+    double? widthCard;
+    double? heightCard;
     return Scaffold(
       drawer: const Drawer(),
       backgroundColor: Colors.white,
@@ -110,63 +115,12 @@ class _OrderPageState extends State<OrderPage> {
             const SizedBox(
               height: 20,
             ),
-            //cards
+            //----------cards
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(32),
-                  child: Container(
-                    height: 220,
-                    width: 160,
-                    color: Colors.yellow,
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/burger.jpg',
-                          //   fit: BoxFit.,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Container(
-                            height: 45,
-                            color: Colors.white,
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text('Burger',
-                                      style: textTheme.headline1!.copyWith(
-                                          fontSize: 20, color: Colors.grey)),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                  const Icon(
-                                    CupertinoIcons.money_dollar,
-                                    size: 26,
-                                    color: Colors.black,
-                                  ),
-                                  Text('28',
-                                      style: textTheme.headline1!.copyWith(
-                                          fontSize: 22, color: Colors.black)),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(32),
-                  child: Container(
-                    height: 180,
-                    width: 160,
-                    color: Colors.red,
-                  ),
-                ),
+                card1('fries', 'xyz'),
+                card2('burger', 'burgerrr'),
               ],
             ),
             const SizedBox(
@@ -175,22 +129,8 @@ class _OrderPageState extends State<OrderPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(32),
-                  child: Container(
-                    height: 180,
-                    width: 160,
-                    color: Colors.red,
-                  ),
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(32),
-                  child: Container(
-                    height: 220,
-                    width: 160,
-                    color: Colors.yellow,
-                  ),
-                ),
+                card2('burger', 'burgerrr'),
+                card1('fries', 'xyz'),
               ],
             ),
           ],
@@ -202,4 +142,3 @@ class _OrderPageState extends State<OrderPage> {
     );
   }
 }
-// hamed qoli nasab ui/ux
