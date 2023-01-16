@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery/bottomNav.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:food_delivery/card.dart';
 
@@ -11,13 +12,18 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> {
+  get myPage => null;
+
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    // final PageController myPage = PageController(initialPage: 0);
+    PageController controller;
     String? foodName;
     String? imgName;
-    double? widthCard;
-    double? heightCard;
+    String? price;
+    // double? widthCard;
+    // double? heightCard;
     return Scaffold(
       drawer: const Drawer(),
       backgroundColor: Colors.white,
@@ -57,7 +63,7 @@ class _OrderPageState extends State<OrderPage> {
         backgroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 18, 15, 18),
+        padding: const EdgeInsets.fromLTRB(15, 18, 15, 2),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,8 +125,8 @@ class _OrderPageState extends State<OrderPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                card1('fries', 'xyz'),
-                card2('burger', 'burgerrr'),
+                card1('fries', 'Fries', '8'),
+                card2('pizza', 'burger', '18.5'),
               ],
             ),
             const SizedBox(
@@ -129,16 +135,14 @@ class _OrderPageState extends State<OrderPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                card2('burger', 'burgerrr'),
-                card1('fries', 'xyz'),
+                card2('burger', 'Burger', '12'),
+                card1('pizza', 'Pizza', '22.5'),
               ],
             ),
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: [],
-      // ),
+      bottomNavigationBar: BottomNav(controller: myPage),
     );
   }
 }

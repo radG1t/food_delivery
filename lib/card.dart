@@ -1,41 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Widget card1(
   imgName,
   foodName,
+  price,
 ) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(32),
     child: Container(
       height: 220,
       width: 160,
-      color: Colors.yellow,
+      color: Colors.yellow.shade900,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Image.asset(
             'assets/$imgName.jpeg',
+            fit: BoxFit.fill,
           ),
           ClipRRect(
-            borderRadius: const BorderRadius.only(
-              bottomRight: Radius.circular(12),
-              bottomLeft: Radius.circular(12),
-            ),
+            borderRadius: BorderRadius.circular(12),
             child: Container(
               height: 45,
+              width: 160,
               color: Colors.white,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(
-                      '$foodName',
-
-                      // style: textTheme.headline1!
-                      //     .copyWith(fontSize: 20, color: Colors.grey),
-                    ),
+                    Text('$foodName',
+                        style:
+                            GoogleFonts.lora(fontSize: 20, color: Colors.grey)),
                     const SizedBox(
                       width: 25,
                     ),
@@ -44,10 +42,9 @@ Widget card1(
                       size: 26,
                       color: Colors.black,
                     ),
-                    const Text(
-                      '28',
-                      // style: textTheme.headline1!
-                      //     .copyWith(fontSize: 22, color: Colors.black),
+                    Text(
+                      '$price',
+                      style: GoogleFonts.lora(fontSize: 20, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -60,10 +57,7 @@ Widget card1(
   );
 }
 
-Widget card2(
-  imgName,
-  foodName,
-) {
+Widget card2(imgName, foodName, price) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(32),
     child: Container(
@@ -71,18 +65,18 @@ Widget card2(
       width: 160,
       color: Colors.yellow,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        /* **positioned && stack *** */
         children: [
           Image.asset(
             'assets/$imgName.jpeg',
+            fit: BoxFit.cover,
           ),
           ClipRRect(
-            borderRadius: const BorderRadius.only(
-              bottomRight: Radius.circular(12),
-              bottomLeft: Radius.circular(12),
-            ),
+            borderRadius: BorderRadius.circular(12),
             child: Container(
               height: 45,
+              width: 160,
               color: Colors.white,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
@@ -91,22 +85,19 @@ Widget card2(
                   children: [
                     Text(
                       '$foodName',
-
-                      // style: textTheme.headline1!
-                      //     .copyWith(fontSize: 20, color: Colors.grey),
+                      style: GoogleFonts.lora(fontSize: 18, color: Colors.grey),
                     ),
                     const SizedBox(
                       width: 25,
                     ),
                     const Icon(
                       CupertinoIcons.money_dollar,
-                      size: 26,
+                      size: 24,
                       color: Colors.black,
                     ),
-                    const Text(
-                      '28',
-                      // style: textTheme.headline1!
-                      //     .copyWith(fontSize: 22, color: Colors.black),
+                    Text(
+                      '$price',
+                      style: GoogleFonts.lora(fontSize: 18, color: Colors.grey),
                     ),
                   ],
                 ),
