@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/bottomNav.dart';
+import 'package:food_delivery/myOrder.dart';
+import 'package:food_delivery/startPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:food_delivery/card.dart';
 
@@ -17,13 +18,11 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    // final PageController myPage = PageController(initialPage: 0);
-    PageController controller;
+
     String? foodName;
     String? imgName;
     String? price;
-    // double? widthCard;
-    // double? heightCard;
+
     return Scaffold(
       drawer: const Drawer(),
       backgroundColor: Colors.white,
@@ -142,7 +141,77 @@ class _OrderPageState extends State<OrderPage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNav(controller: myPage),
+      //-----navigator
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: SizedBox(
+            height: 35,
+            child: BottomAppBar(
+              color: Colors.black,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    IconButton(
+                      icon: const Icon(
+                        CupertinoIcons.home,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                      onPressed: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const StartPage())));
+                      }),
+                    ),
+                    IconButton(
+                      icon: const Icon(
+                        CupertinoIcons.shopping_cart,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                      onPressed: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const myOrder(),
+                            ));
+                      }),
+                    ),
+                    IconButton(
+                      icon: const Icon(
+                        Icons.notifications,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                      onPressed: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const OrderPage()));
+                      }),
+                    ),
+                    IconButton(
+                      icon: const Icon(
+                        CupertinoIcons.settings,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                      onPressed: (() {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const OrderPage()),
+                        );
+                      }),
+                    ),
+                  ]),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
