@@ -176,7 +176,7 @@ class _OrderPageState extends State<OrderPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const myOrder(),
+                              builder: (context) => const MyOrder(),
                             ));
                       }),
                     ),

@@ -109,3 +109,78 @@ Widget card2(imgName, foodName, price) {
     ),
   );
 }
+
+class card3 extends StatelessWidget {
+  const card3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Expanded(
+        child: Container(
+          color: Colors.white,
+          //    width: 320,
+          height: 400,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(15, 20, 0, 0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Carbonara',
+                      style: GoogleFonts.lora(
+                          fontSize: 28,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w800),
+                    ),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.42),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(45),
+                      child: Container(
+                        width: 30,
+                        height: 30,
+                        color: Colors.grey.shade500,
+                        child: Center(
+                          child: Text(
+                            '1/4',
+                            style: GoogleFonts.lora(
+                              fontSize: 12,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: const [
+                    Text(
+                      '240 g - \$16',
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 120,
+                ),
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(12),
+                    topRight: Radius.circular(12),
+                  ),
+                  child: Image.asset(
+                    'assets/pizza.jpeg',
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
