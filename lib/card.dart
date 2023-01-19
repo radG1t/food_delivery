@@ -121,9 +121,9 @@ class card3 extends StatelessWidget {
         child: Container(
           color: Colors.white,
           //    width: 320,
-          height: 400,
+          height: 380,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(15, 20, 0, 0),
+            padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
             child: Column(
               children: [
                 Row(
@@ -137,7 +137,7 @@ class card3 extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.w800),
                     ),
-                    SizedBox(width: MediaQuery.of(context).size.width * 0.42),
+                    const Expanded(child: SizedBox(width: double.infinity)),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(45),
                       child: Container(
@@ -186,70 +186,93 @@ class card3 extends StatelessWidget {
 }
 
 Widget Card4() {
-  return Expanded(
-    child: ClipRRect(
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        //width: 50,
-        color: const Color.fromARGB(255, 190, 211, 247),
-        child: Center(
-          child: Column(children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(45),
-              child: Container(
-                width: 40,
-                height: 40,
-                color: const Color.fromARGB(255, 107, 140, 167),
-                child: const Icon(
-                  CupertinoIcons.creditcard,
-                  color: Colors.white54,
-                  size: 24,
+  return ClipRRect(
+    borderRadius: BorderRadius.circular(12),
+    child: Container(
+      width: 150,
+      color: const Color.fromARGB(255, 190, 211, 247),
+      child: Center(
+        child: Column(children: [
+          const SizedBox(
+            height: 50,
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(45),
+            child: Container(
+              width: 40,
+              height: 40,
+              color: const Color.fromARGB(255, 107, 140, 167),
+              child: const Icon(
+                CupertinoIcons.creditcard,
+                color: Colors.white54,
+                size: 24,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            '\$258',
+            style: GoogleFonts.lora(
+                fontSize: 22, color: Colors.black, fontWeight: FontWeight.w500),
+          ),
+          Text(
+            'Total',
+            style: GoogleFonts.lora(
+                fontSize: 12,
+                color: Colors.grey.shade700,
+                fontWeight: FontWeight.w200),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Container(
+              color: Colors.white,
+              height: 45,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(5, 0, 30, 0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(45),
+                      child: Container(
+                        color: Colors.black87,
+                        height: 28,
+                        width: 28,
+                        child: Center(
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                CupertinoIcons.chevron_right_2,
+                                size: 14,
+                                color: Colors.grey,
+                              )),
+                        ),
+                      ),
+                    ),
+                    const Expanded(
+                      child: SizedBox(
+                        width: double.infinity,
+                      ),
+                    ),
+                    Text(
+                      'Pay now',
+                      style: GoogleFonts.lora(
+                          fontSize: 14,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w500),
+                    )
+                  ],
                 ),
               ),
             ),
-            Text(
-              '\$258',
-              style: GoogleFonts.abel(
-                  fontSize: 22,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500),
-            ),
-            Text(
-              'Total',
-              style: GoogleFonts.lora(
-                  fontSize: 12,
-                  color: Colors.grey.shade700,
-                  fontWeight: FontWeight.w200),
-            ),
-            ClipRRect(
-                child: Container(
-              color: Colors.white,
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(45),
-                    child: Container(
-                      color: Colors.black87,
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            CupertinoIcons.chevron_forward,
-                            color: Colors.grey,
-                          )),
-                    ),
-                  ),
-                  Text(
-                    'Pay now',
-                    style: GoogleFonts.lora(
-                        fontSize: 14,
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-            ))
-          ]),
-        ),
+          )
+        ]),
       ),
     ),
   );
