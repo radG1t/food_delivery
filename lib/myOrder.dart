@@ -58,6 +58,49 @@ class _MyOrderState extends State<MyOrder> {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //---left cards
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              height: 120,
+                              width: 80,
+                              color: Colors.red,
+                              child: const Text('bie eiki ouch dord'),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              height: 120,
+                              width: 80,
+                              color: Colors.red,
+                              child: Text('bie eiki ouch dord'),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  //---right card
+                  Card4(),
+                ],
+              )
             ]),
       ),
     );

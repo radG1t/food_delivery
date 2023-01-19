@@ -184,3 +184,73 @@ class card3 extends StatelessWidget {
     );
   }
 }
+
+Widget Card4() {
+  return Expanded(
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        //width: 50,
+        color: const Color.fromARGB(255, 190, 211, 247),
+        child: Center(
+          child: Column(children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(45),
+              child: Container(
+                width: 40,
+                height: 40,
+                color: const Color.fromARGB(255, 107, 140, 167),
+                child: const Icon(
+                  CupertinoIcons.creditcard,
+                  color: Colors.white54,
+                  size: 24,
+                ),
+              ),
+            ),
+            Text(
+              '\$258',
+              style: GoogleFonts.abel(
+                  fontSize: 22,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+            ),
+            Text(
+              'Total',
+              style: GoogleFonts.lora(
+                  fontSize: 12,
+                  color: Colors.grey.shade700,
+                  fontWeight: FontWeight.w200),
+            ),
+            ClipRRect(
+                child: Container(
+              color: Colors.white,
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(45),
+                    child: Container(
+                      color: Colors.black87,
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            CupertinoIcons.chevron_forward,
+                            color: Colors.grey,
+                          )),
+                    ),
+                  ),
+                  Text(
+                    'Pay now',
+                    style: GoogleFonts.lora(
+                        fontSize: 14,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w500),
+                  )
+                ],
+              ),
+            ))
+          ]),
+        ),
+      ),
+    ),
+  );
+}
