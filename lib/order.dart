@@ -124,8 +124,8 @@ class _OrderPageState extends State<OrderPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                card1('fries', 'Fries', '8'),
-                card2('pizza', 'burger', '18.5'),
+                Card1('fries', 'Fries', '8'),
+                Card2('pizza', 'burger', '18.5'),
               ],
             ),
             const SizedBox(
@@ -134,8 +134,8 @@ class _OrderPageState extends State<OrderPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                card2('burger', 'Burger', '12'),
-                card1('pizza', 'Pizza', '22.5'),
+                Card2('burger', 'Burger', '12'),
+                Card1('pizza', 'Pizza', '22.5'),
               ],
             ),
           ],

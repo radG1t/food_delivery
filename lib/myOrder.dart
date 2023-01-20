@@ -40,7 +40,7 @@ class _MyOrderState extends State<MyOrder> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               const Center(
-                child: card3(),
+                child: Card3(),
               ),
               const SizedBox(
                 height: 15,
@@ -71,65 +71,17 @@ class _MyOrderState extends State<MyOrder> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Container(
-                              height: 120,
-                              width: 80,
-                              color: const Color.fromARGB(255, 79, 37, 194),
-                              child: const Text('bie eiki ouch dord'),
-                            ),
-                          ),
+                          Card5(),
                           const SizedBox(
                             width: 15,
                           ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Container(
-                              height: 120,
-                              width: 80,
-                              color: Colors.white,
-                              child: const Text('bie eiki ouch dord'),
-                            ),
-                          ),
+                          Card6(),
                         ],
                       ),
                       const SizedBox(
                         height: 15,
                       ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Container(
-                          width: 170,
-                          height: 110,
-                          //    height: double.maxFinite,
-                          color: Color.fromARGB(223, 67, 64, 73),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Delivery adress',
-                                  style: GoogleFonts.lora(
-                                      fontSize: 12,
-                                      color:
-                                          Color.fromARGB(255, 141, 137, 137)),
-                                ),
-                                const SizedBox(
-                                  height: 8,
-                                ),
-                                Text(
-                                  '6391 Elgin St.Celina, Delaware 10299',
-                                  style: GoogleFonts.lora(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      Card7(),
                     ],
                   ),
                   const SizedBox(

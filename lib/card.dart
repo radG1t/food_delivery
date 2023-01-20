@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget card1(
+Widget Card1(
   imgName,
   foodName,
   price,
@@ -57,7 +57,7 @@ Widget card1(
   );
 }
 
-Widget card2(imgName, foodName, price) {
+Widget Card2(imgName, foodName, price) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(32),
     child: Container(
@@ -110,8 +110,8 @@ Widget card2(imgName, foodName, price) {
   );
 }
 
-class card3 extends StatelessWidget {
-  const card3({super.key});
+class Card3 extends StatelessWidget {
+  const Card3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -169,8 +169,8 @@ class card3 extends StatelessWidget {
                 ),
                 ClipRRect(
                   borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(12),
-                    topRight: Radius.circular(12),
+                    topLeft: Radius.circular(80),
+                    topRight: Radius.circular(80),
                   ),
                   child: Image.asset(
                     'assets/pizza.jpeg',
@@ -273,6 +273,121 @@ Widget Card4() {
             ),
           )
         ]),
+      ),
+    ),
+  );
+}
+
+Widget Card5() {
+  return ClipRRect(
+    borderRadius: BorderRadius.circular(12),
+    child: Container(
+      height: 120,
+      width: 80,
+      color: const Color.fromARGB(255, 79, 37, 194),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            'Average rate',
+            style: GoogleFonts.lora(fontSize: 10, color: Colors.white),
+          ),
+          Text(
+            '4.65',
+            style: GoogleFonts.lora(fontSize: 22, color: Colors.white),
+          ),
+          Image.asset(
+            'assets/chart.png',
+            color: Colors.white,
+            width: 70,
+          )
+        ],
+      ),
+    ),
+  );
+}
+
+Widget Card6() {
+  return ClipRRect(
+    borderRadius: BorderRadius.circular(12),
+    child: Container(
+      height: 120,
+      width: 80,
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(
+                width: 12,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(45),
+                child: Container(
+                  width: 28,
+                  height: 28,
+                  color: const Color.fromARGB(255, 156, 147, 147),
+                  child: const Center(
+                    child: Icon(CupertinoIcons.time,
+                        size: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Text(
+            'Deliver time',
+            style: GoogleFonts.lora(fontSize: 12, color: Colors.grey),
+          ),
+          Text(
+            '12:45',
+            style: GoogleFonts.lora(fontSize: 22, color: Colors.black),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget Card7() {
+  return ClipRRect(
+    borderRadius: BorderRadius.circular(12),
+    child: Container(
+      width: 170,
+      height: 110,
+      //    height: double.maxFinite,
+      color: Color.fromARGB(223, 67, 64, 73),
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Delivery adress',
+              style: GoogleFonts.lora(
+                  fontSize: 12, color: Color.fromARGB(255, 141, 137, 137)),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Text(
+              '6391 Elgin St.Celina, Delaware 10299',
+              style: GoogleFonts.lora(fontSize: 16, color: Colors.white),
+            ),
+          ],
+        ),
       ),
     ),
   );
